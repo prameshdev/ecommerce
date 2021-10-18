@@ -1,0 +1,43 @@
+<div class="card-top conatiner-fluid">
+    <div class="container d-flex">
+<div class="item">
+    <a (click)="filter('jewelery')">
+        <img style="width: 100px; height: 100px;" src="../../../assets/img-2.jpg" alt="">
+        <h5>Jewellery</h5>
+    </a>
+</div>
+<div class="item">
+    <a (click)="filter('electronics')">
+        <img style="width: 100px; height: 100px;" src="../../../assets/images.jpg" alt="">
+    <h5>Electronics</h5>
+</a>
+</div>
+<div class="item">
+    <a (click)="filter('fashion')">
+        <img style="width: 100px; height: 100px;" src="../../../assets/images (1).jpg" alt="">
+    <h5>Fashion</h5>
+</a>
+</div>
+<div class="item">
+    <a (click)="filter('')">
+        <img style="width: 100px; height: 100px;" src="../../../assets/img-4.jpg" alt="">
+    <h5>All Products</h5>
+</a>
+</div>    
+</div>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor= "let item of filterCategory | filter:searchKey:'title' ">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>add to cart</button>
+            </div>
+        </ng-container>
+      
+</div>
+</div>

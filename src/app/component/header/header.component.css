@@ -1,0 +1,17 @@
+strong{
+    color: white;
+}
+.fa-shipping-fast{
+    color: white;
+}
+.form-control{
+    margin-left: 20px;
+    border-radius: 3px;
+    width: 600px;
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 50%;
+    color: cyan;
+}
